@@ -43,8 +43,8 @@ function noWeakLink() {
     method: 'GET',
     url: '/api/users'
   })
-  // CODE HERE...
-
+  .then(response => firstUser = response.data[0])
+  .then(response => thirdUser = response.data[2])
 }
 
 
@@ -73,7 +73,14 @@ function large() {
 
   return 'My name is ' + this.name + ' and I am very heavy!'
 }
-// CODE HERE...
+
+var boundToElephant = large.bind(elephant);
+
+
+
+boundToElephant();
+
+
 
 
 
@@ -87,7 +94,9 @@ function large() {
 // Use explicit binding to give capacity the context of crew
 // and return the bound function.
 
-// CODE HERE...
+var deathStar = (cap, crew) => {
+  
+}
 
 
 
@@ -102,7 +111,9 @@ function large() {
 // The closure function will take in a parameter: liabilities (Number)
 // The closure function will return the combined value of assets and liabilities.
 
-// CODE HERE...
+var accountingOffice = (assets) => {
+
+}
 
 
 
